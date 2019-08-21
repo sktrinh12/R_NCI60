@@ -1,0 +1,4 @@
+write.table(xx,'clipboard',row.names = FALSE,col.names = FALSE,sep='\t',quote = FALSE)
+
+read.table(file='clipboard',sep='\t')
+

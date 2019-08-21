@@ -1,0 +1,137 @@
+---
+title: "SOMmapEx"
+output: pdf_document
+---
+## SOM mapping of data Example
+
+```{r}
+library(data.table)
+library(kohonen)
+trainSOM<-function(som_grid, data,w=c(1)){
+  set.seed(7)
+  som_grid$n.hood<-"circular"
+  nhbrdist<-unit.distances(som_grid, FALSE) #sets up a grid of units, of a specified size and topology. Distances between grid units are calculated by function unit.distances
+  r<-quantile(nhbrdist, 0.67) * c(1, -1)
+  som_model<-supersom(data,grid=som_grid,rlen=150, maxNA.fraction = .9, keep.data = T,
+                      alpha=c(0.05,0.01), radius=r)
+  return(som_model)
+}
+#r - the radius of the neighbourhood, either given as a single number or a vector (start, stop). If it is given as a single number the radius will run from the given number to the negative value of that number; as soon as the neighbourhood gets smaller than one only the winning unit will be updated. The default is to start with a value that covers 2/3 of all unit-to-unit distances.
+#maxNA.fx -  the maximal fraction of values that may be NA to prevent the row or column to be removed.
+d<-fread("C:\\users\\trinh\\Documents\\R\\NCI60_5dose\\CANCER_5_DOSE_DATA.csv")
+```
+
+```{r}
+d.som.train<-data.frame(d[sample(nrow(d),1600),]) # however many you'd like
+rownames(d.som.train)<-d.som.train$V1
+```
+
+```{r}
+#### estimate the size of the grid
+d.c<-cov(d.som.train[,-1],use="pairwise.complete.obs")
+munits=ceiling(5*nrow(d.som.train)^0.5)
+A<-eigen(d.c)
+eigval<-sort(A$values,decreasing=TRUE)[1:2]
+ratio=sqrt(eigval[1]/eigval[2])
+size1=min(munits,round(sqrt(munits/ratio*sqrt(0.75)))) #sqrt of 112/(1.65)(sqrt(3/4)), minimum of 112 and 8 will be 8?
+size2=round(munits/size1)
+```
+
+```{r}
+d.som.train<-as.matrix(d.som.train[,-1]) #indx 2nd colm to last only
+som_grid<-somgrid(xdim=size2,ydim=size1,topo="hexagonal")
+som_model<-trainSOM(som_grid, list(d.som.train))
+som_model$codes[[1]] # should be your codebook vectors
+```
+
+```{r}
+plot(som_model,"dist.neighbours")
+```
+
+```{r}
+plot(som_model,"changes")
+```
+
+```{r}
+pltmsom<-function(n,som_model) {
+  for (i in seq(n)){
+    shc<-cutree(hclust(dist(som_model$codes[[1]])),i+5)
+    plot(som_model,"mapping",bgcol=rainbow(i+5)[shc],main=paste("SOM Plot with ",i+5," groups/classes"))
+    add.cluster.boundaries(som_model,shc)
+    readline(prompt="Press [enter] to continue")
+    if (i+5 >= n){
+      break
+    }
+  }
+}
+```
+
+```{r}
+pltmsom(12,som_model)
+```
+
+```{r}
+nodecls<-som_model$unit.classif
+dfn<-data.frame(matrix(NA,nrow=1,ncol=3))
+colnames(dfn) <- c("nsc/expID","node","group")
+for (i in seq(nodecls)){
+  nsc<-row.names(d.som.train)[i]
+  nd<-nodecls[i]
+  grp<-shc[nodecls[i]]
+  dfn<-rbind(dfn,c(nsc,nd,grp))
+  if (i == length(nodecls)){dfn<-dfn[complete.cases(dfn),]; print(dfn)}
+}
+```
+
+```{r}
+shc<-cutree(hclust(dist(som_model$codes[[1]])),6)
+plot(som_model,"mapping",bgcol=rainbow(6)[shc],keepMargins = T)
+add.cluster.boundaries(som_model,shc)
+grpnm<-sapply(sort(unique(as.numeric(dfn$group))),function(x) paste("Group",x))
+legend("bottom", legend = grpnm, text.col = rainbow(6), bty = "n", horiz=T,cex=0.75,inset = c(0,0.3),xjust=0,text.width=rep(0,6))
+```
+
+```{r}
+identify(som_model$grid$pts,labels=as.vector(shc),plot=T,pos=T) #shows each node position and grouping is written on plot afterwards
+```
+
+```{r}
+###MAP NEW DATA
+d.Xtrain<-d[d$V1 %in% row.names(d.som.train),]
+d.Xtrain<-d.Xtrain[,-1]
+mapped.dat<-map(som_model,scale(d.Xtrain))
+```
+
+```{r}
+d.Xtest<-d[!d$V1 %in% row.names(d.som.train),] #data without the samples from training set
+d.Xtest<-d.Xtest[,-1]
+mapped.dat<-map(som_model,scale(d.Xtest))
+mclass<-mapped.dat$unit.classif
+mergedf <- data.frame(matrix(NA,nrow=1,ncol=3))
+colnames(mergedf)<-c("mclass","nodePosX","nodePosY")
+indx.mclass<-seq(mclass)
+n=1
+for (i in mclass){
+  mcls<-mclass[n]
+  npX<-som_model$grid$pts[mcls,1]
+  npY<-som_model$grid$pts[mcls,2]
+  tmpdf<-data.frame(mcls,npX,npY)
+  colnames(tmpdf)<-c("mclass","nodePosX","nodePosY")
+  mergedf<-rbind(mergedf,tmpdf)
+  n=n+1
+}
+df.X<-mergedf[-1,] #remove first row
+```
+
+```{r}
+centrepts<-matrix(c(df.X$nodePosX,df.X$nodePosY),ncol=2)
+rm.indx<-which(is.na(centrepts))[1:13] #only remove 13 NAs in order to maintain an even number of rows
+centrepts.n<-centrepts[-rm.indx,]
+offset<-matrix(rnorm(nrow(centrepts.n)*2,sd=0.09),ncol=2)
+```
+
+```{r}
+symbols(centrepts.n+offset,
+        circles=rep(0.14,nrow(centrepts.n)),
+        inches=F,add=T,fg="white",bg="grey")
+```

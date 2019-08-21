@@ -1,0 +1,89 @@
+,Cmpd_Name,Sample_Name,count,Score (DB)
+1,"3-Methyl-1,8-naphthalenediol",N133307_UTHSC_Y3_5_7,1,64.66
+2,"3-Methyl-1,8-naphthalenediol",N133307_UTHSC_Y3_6_12,0,NA
+3,"3-Methyl-1,8-naphthalenediol",N133307_UTHSC_Y3_6_13,0,NA
+4,"3-Methyl-1,8-naphthalenediol",N133307_UTHSC_Y3_6_14,0,NA
+5,"3-Methyl-1,8-naphthalenediol",N133307_UTHSC_Y3_6_15,0,NA
+6,"3,19-Dihydroxy-12-ursene-24,28-dioic acid; (3,19)-form",N133307_UTHSC_Y3_5_7,0,NA
+7,"3,19-Dihydroxy-12-ursene-24,28-dioic acid; (3,19)-form",N133307_UTHSC_Y3_6_12,1,70.86
+8,"3,19-Dihydroxy-12-ursene-24,28-dioic acid; (3,19)-form",N133307_UTHSC_Y3_6_13,0,NA
+9,"3,19-Dihydroxy-12-ursene-24,28-dioic acid; (3,19)-form",N133307_UTHSC_Y3_6_14,0,NA
+10,"3,19-Dihydroxy-12-ursene-24,28-dioic acid; (3,19)-form",N133307_UTHSC_Y3_6_15,0,NA
+11,"3,19,24-Trihydroxy-12,20(30)-ursadien-28-oic acid; (3,19)-form, 24-Carboxylic acid",N133307_UTHSC_Y3_5_7,1,76.69
+12,"3,19,24-Trihydroxy-12,20(30)-ursadien-28-oic acid; (3,19)-form, 24-Carboxylic acid",N133307_UTHSC_Y3_6_12,0,NA
+13,"3,19,24-Trihydroxy-12,20(30)-ursadien-28-oic acid; (3,19)-form, 24-Carboxylic acid",N133307_UTHSC_Y3_6_13,0,NA
+14,"3,19,24-Trihydroxy-12,20(30)-ursadien-28-oic acid; (3,19)-form, 24-Carboxylic acid",N133307_UTHSC_Y3_6_14,0,NA
+15,"3,19,24-Trihydroxy-12,20(30)-ursadien-28-oic acid; (3,19)-form, 24-Carboxylic acid",N133307_UTHSC_Y3_6_15,0,NA
+16,"3,3'-Bis(hydroxymethyl)-2,2'-binaphthalene-1,1',4,4',8,8'-hexol; 4,4',8,8'-Tetra-Me ether",N133307_UTHSC_Y3_5_7,1,51.44
+17,"3,3'-Bis(hydroxymethyl)-2,2'-binaphthalene-1,1',4,4',8,8'-hexol; 4,4',8,8'-Tetra-Me ether",N133307_UTHSC_Y3_6_12,1,72.79
+18,"3,3'-Bis(hydroxymethyl)-2,2'-binaphthalene-1,1',4,4',8,8'-hexol; 4,4',8,8'-Tetra-Me ether",N133307_UTHSC_Y3_6_13,1,80.6
+19,"3,3'-Bis(hydroxymethyl)-2,2'-binaphthalene-1,1',4,4',8,8'-hexol; 4,4',8,8'-Tetra-Me ether",N133307_UTHSC_Y3_6_14,0,NA
+20,"3,3'-Bis(hydroxymethyl)-2,2'-binaphthalene-1,1',4,4',8,8'-hexol; 4,4',8,8'-Tetra-Me ether",N133307_UTHSC_Y3_6_15,0,NA
+21,"5-Hydroxy-6-(1-hydroxyethyl)-2-methyl-1,4-naphthoquinone; ()-form, 1'-Et ether",N133307_UTHSC_Y3_5_7,0,NA
+22,"5-Hydroxy-6-(1-hydroxyethyl)-2-methyl-1,4-naphthoquinone; ()-form, 1'-Et ether",N133307_UTHSC_Y3_6_12,0,NA
+23,"5-Hydroxy-6-(1-hydroxyethyl)-2-methyl-1,4-naphthoquinone; ()-form, 1'-Et ether",N133307_UTHSC_Y3_6_13,0,NA
+24,"5-Hydroxy-6-(1-hydroxyethyl)-2-methyl-1,4-naphthoquinone; ()-form, 1'-Et ether",N133307_UTHSC_Y3_6_14,1,76.84
+25,"5-Hydroxy-6-(1-hydroxyethyl)-2-methyl-1,4-naphthoquinone; ()-form, 1'-Et ether",N133307_UTHSC_Y3_6_15,0,NA
+26,"7-Methyl-1,2,4,5-naphthalenetetrol; 1,2,4-Tri-Me ether",N133307_UTHSC_Y3_5_7,1,50.51
+27,"7-Methyl-1,2,4,5-naphthalenetetrol; 1,2,4-Tri-Me ether",N133307_UTHSC_Y3_6_12,0,NA
+28,"7-Methyl-1,2,4,5-naphthalenetetrol; 1,2,4-Tri-Me ether",N133307_UTHSC_Y3_6_13,0,NA
+29,"7-Methyl-1,2,4,5-naphthalenetetrol; 1,2,4-Tri-Me ether",N133307_UTHSC_Y3_6_14,0,NA
+30,"7-Methyl-1,2,4,5-naphthalenetetrol; 1,2,4-Tri-Me ether",N133307_UTHSC_Y3_6_15,0,NA
+31,"8-Hydroxy-6-methyl-1,2-naphthoquinone; Me ether",N133307_UTHSC_Y3_5_7,0,NA
+32,"8-Hydroxy-6-methyl-1,2-naphthoquinone; Me ether",N133307_UTHSC_Y3_6_12,1,49.56
+33,"8-Hydroxy-6-methyl-1,2-naphthoquinone; Me ether",N133307_UTHSC_Y3_6_13,0,NA
+34,"8-Hydroxy-6-methyl-1,2-naphthoquinone; Me ether",N133307_UTHSC_Y3_6_14,0,NA
+35,"8-Hydroxy-6-methyl-1,2-naphthoquinone; Me ether",N133307_UTHSC_Y3_6_15,0,NA
+36,9-Oxo-13-octadecenoic acid; (Z)-form,N133307_UTHSC_Y3_5_7,0,NA
+37,9-Oxo-13-octadecenoic acid; (Z)-form,N133307_UTHSC_Y3_6_12,1,79.7
+38,9-Oxo-13-octadecenoic acid; (Z)-form,N133307_UTHSC_Y3_6_13,1,80.02
+39,9-Oxo-13-octadecenoic acid; (Z)-form,N133307_UTHSC_Y3_6_14,1,76.06
+40,9-Oxo-13-octadecenoic acid; (Z)-form,N133307_UTHSC_Y3_6_15,0,NA
+41,"Diospyrin; 2',3'-Dihydro",N133307_UTHSC_Y3_5_7,0,NA
+42,"Diospyrin; 2',3'-Dihydro",N133307_UTHSC_Y3_6_12,0,NA
+43,"Diospyrin; 2',3'-Dihydro",N133307_UTHSC_Y3_6_13,1,81.92
+44,"Diospyrin; 2',3'-Dihydro",N133307_UTHSC_Y3_6_13,1,66.28
+45,"Diospyrin; 2',3'-Dihydro",N133307_UTHSC_Y3_6_14,0,NA
+46,"Diospyrin; 2',3'-Dihydro",N133307_UTHSC_Y3_6_15,1,75.3
+47,Diospyrin; 3'-Methoxy,N133307_UTHSC_Y3_5_7,0,NA
+48,Diospyrin; 3'-Methoxy,N133307_UTHSC_Y3_6_12,0,NA
+49,Diospyrin; 3'-Methoxy,N133307_UTHSC_Y3_6_13,0,NA
+50,Diospyrin; 3'-Methoxy,N133307_UTHSC_Y3_6_14,1,83.05
+51,Diospyrin; 3'-Methoxy,N133307_UTHSC_Y3_6_14,1,67.17
+52,Diospyrin; 3'-Methoxy,N133307_UTHSC_Y3_6_15,0,NA
+53,Diospyrol,N133307_UTHSC_Y3_5_7,0,NA
+54,Diospyrol,N133307_UTHSC_Y3_6_12,1,67.09
+55,Diospyrol,N133307_UTHSC_Y3_6_13,0,NA
+56,Diospyrol,N133307_UTHSC_Y3_6_14,0,NA
+57,Diospyrol,N133307_UTHSC_Y3_6_15,0,NA
+58,Diospyrosin,N133307_UTHSC_Y3_5_7,1,79.63
+59,Diospyrosin,N133307_UTHSC_Y3_5_7,1,58.7
+60,Diospyrosin,N133307_UTHSC_Y3_6_12,0,NA
+61,Diospyrosin,N133307_UTHSC_Y3_6_13,0,NA
+62,Diospyrosin,N133307_UTHSC_Y3_6_14,0,NA
+63,Diospyrosin,N133307_UTHSC_Y3_6_15,0,NA
+64,Galpinone,N133307_UTHSC_Y3_5_7,0,NA
+65,Galpinone,N133307_UTHSC_Y3_6_12,0,NA
+66,Galpinone,N133307_UTHSC_Y3_6_13,0,NA
+67,Galpinone,N133307_UTHSC_Y3_6_14,1,69.11
+68,Galpinone,N133307_UTHSC_Y3_6_15,0,NA
+69,"Isodiospyrin; (R)axial-form, 7,7'-Diethoxy",N133307_UTHSC_Y3_5_7,0,NA
+70,"Isodiospyrin; (R)axial-form, 7,7'-Diethoxy",N133307_UTHSC_Y3_6_12,0,NA
+71,"Isodiospyrin; (R)axial-form, 7,7'-Diethoxy",N133307_UTHSC_Y3_6_13,1,86.79
+72,"Isodiospyrin; (R)axial-form, 7,7'-Diethoxy",N133307_UTHSC_Y3_6_14,0,NA
+73,"Isodiospyrin; (R)axial-form, 7,7'-Diethoxy",N133307_UTHSC_Y3_6_15,0,NA
+74,Tetrahydrodiospyrin,N133307_UTHSC_Y3_5_7,1,49.78
+75,Tetrahydrodiospyrin,N133307_UTHSC_Y3_6_12,1,94.06
+76,Tetrahydrodiospyrin,N133307_UTHSC_Y3_6_13,1,62.51
+77,Tetrahydrodiospyrin,N133307_UTHSC_Y3_6_14,0,NA
+78,Tetrahydrodiospyrin,N133307_UTHSC_Y3_6_15,0,NA
+79,Xylospyrin,N133307_UTHSC_Y3_5_7,0,NA
+80,Xylospyrin,N133307_UTHSC_Y3_6_12,0,NA
+81,Xylospyrin,N133307_UTHSC_Y3_6_13,1,56.17
+82,Xylospyrin,N133307_UTHSC_Y3_6_14,0,NA
+83,Xylospyrin,N133307_UTHSC_Y3_6_15,0,NA
+84,"Zeylanone; 2',3'-Epoxide",N133307_UTHSC_Y3_5_7,0,NA
+85,"Zeylanone; 2',3'-Epoxide",N133307_UTHSC_Y3_6_12,0,NA
+86,"Zeylanone; 2',3'-Epoxide",N133307_UTHSC_Y3_6_13,0,NA
+87,"Zeylanone; 2',3'-Epoxide",N133307_UTHSC_Y3_6_14,1,61.92
+88,"Zeylanone; 2',3'-Epoxide",N133307_UTHSC_Y3_6_15,0,NA

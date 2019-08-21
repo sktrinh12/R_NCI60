@@ -1,0 +1,9 @@
+Category,Reason,Species
+Decline,Genuine,24
+Improved,Genuine,16
+Improved,Misclassified,85
+Decline,Misclassified,41
+Decline,Taxonomic,2
+Improved,Taxonomic,7
+Decline,Unclear,41
+Improved,Unclear,117
